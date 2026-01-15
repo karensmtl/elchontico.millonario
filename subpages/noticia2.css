@@ -13,10 +13,167 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* ============================================ */
+/* ESTILOS DE PUBLICIDAD */
+/* ============================================ */
+
+/* Etiqueta "PUBLICIDAD" */
+.ad-label {
+    text-align: center;
+    font-size: 0.7em;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Banner Superior */
+.ad-top {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 10px solid #e0e0e0;
+    margin-bottom: 0;
+}
+
+.ad-top img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+/* Publicidad en medio del artículo */
+.ad-inline {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 320px;
+}
+
+.ad-inline img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Publicidad después del artículo */
+.ad-article-bottom {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.ad-article-bottom img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Publicidad en sidebar */
+.ad-sidebar-box {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.ad-sidebar-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sidebars laterales fijos (Skyscrapers) */
+.ad-sidebar {
+    width: 160px;
+}
+
+.ad-left {
+    margin-right: 20px;
+}
+
+.ad-right {
+    margin-left: 20px;
+}
+
+.ad-sticky {
+    position: sticky;
+    top: 80px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    text-align: center;
+}
+
+.ad-sticky img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Banner antes de relacionadas */
+.ad-before-related {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 40px 0 30px;
+    text-align: center;
+}
+
+.ad-before-related img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Banner inferior pegajoso */
+.ad-bottom-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 2px solid #e0e0e0;
+    padding: 15px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.ad-bottom-sticky img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ad-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: #666;
+    color: #fff;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    transition: background 0.3s;
+}
+
+.ad-close:hover {
+    background: #0015ff;
+}
+
+/* ============================================ */
+/* ESTILOS DEL SITIO (Estilo Caracol) */
+/* ============================================ */
 
 /* Top Bar */
 .top-bar {
@@ -41,12 +198,12 @@ body {
     color: #ccc;
 }
 
-.social-links { 
-    display: none; /* lo desactive por el momento lo de las redes sociales k */
+.social-links {
+    display: flex;
     gap: 15px;
 }
 
-.social-links a { 
+.social-links a {
     color: #ccc;
     text-decoration: none;
     transition: color 0.3s;
@@ -58,7 +215,7 @@ body {
 
 /* Header */
 .header {
-    background: #121a33;
+    background: #000a7c;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -106,7 +263,7 @@ body {
 }
 
 .breadcrumb a {
-    color: #2600ff;
+    color: #1326f7;
     text-decoration: none;
 }
 
@@ -121,9 +278,17 @@ body {
 /* Main Content */
 .main-content {
     padding: 30px 0;
+    padding-bottom: 120px; /* Espacio para banner inferior fijo */
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .content-grid {
+    flex: 1;
     display: grid;
     grid-template-columns: 1fr 350px;
     gap: 30px;
@@ -137,8 +302,8 @@ body {
 }
 
 .category-tag {
-    display: inline-block; /* juegos y sorteo*/
-    background:#2600ff;
+    display: inline-block;
+    background: #000a7c;
     color: #fff;
     padding: 6px 16px;
     font-size: 0.75em;
@@ -194,7 +359,7 @@ body {
     font-size: 0.9em;
     color: #666;
     font-style: italic;
-    border-left: 3px solid #2600ff;
+    border-left: 3px solid #1900ff;
 }
 
 .article-body {
@@ -214,7 +379,7 @@ body {
     margin-bottom: 15px;
     font-weight: 700;
     padding-bottom: 10px;
-    border-bottom: 2px solid #2600ff;
+    border-bottom: 2px solid #4800ff;
 }
 
 .article-body h3 {
@@ -250,50 +415,18 @@ body {
     color: #444;
 }
 
-.contact-box {
-    background: #fff;
-    border: 2px solid #e0e0e0;
-    padding: 30px;
-    margin: 30px 0;
-}
-
-.contact-box h3 {
-    color: #1a1a1a;
-    margin-bottom: 20px;
-    font-size: 1.3em;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.contact-item strong {
-    display: block;
-    color: #2600ff;
-    margin-bottom: 8px;
-    font-size: 1.1em;
-}
-
-.contact-item p {
-    color: #666;
-    margin: 0;
-    line-height: 1.6;
-}
-
 .warning-box {
-    background: #ffcdcd;
-    border-left: 4px solid #ff0000;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
     padding: 25px;
     margin: 30px 0;
 }
 
 .warning-box h3 {
-    color: #ff0404;
+    color: #856404;
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 2.2em;
+    font-size: 1.2em;
 }
 
 .warning-box ul {
@@ -312,7 +445,7 @@ body {
     content: "▸";
     position: absolute;
     left: 0;
-    color: #ff0000;
+    color: #ffc107;
     font-weight: bold;
 }
 
@@ -422,7 +555,7 @@ body {
     color: #1a1a1a;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #0040ff;
+    border-bottom: 3px solid #0015ff;
     font-weight: 700;
 }
 
@@ -474,7 +607,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background: #f8be1e;
+    background: #030718;
     color: #fff;
     width: 25px;
     height: 25px;
@@ -492,7 +625,7 @@ body {
 }
 
 .most-read-list a:hover {
-    color: #3300cc;
+    color:#000a7c;
 }
 
 /* Related Articles */
@@ -529,7 +662,7 @@ body {
 
 .related-card img {
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
     display: block;
 }
@@ -540,7 +673,7 @@ body {
 
 .related-category {
     display: inline-block;
-    background: #1d09ff;
+    background: #000a7c;
     color: #fff;
     padding: 4px 10px;
     font-size: 0.7em;
@@ -606,11 +739,6 @@ body {
     color: #fff;
 }
 
-.footer-social {
-    display: flex;
-    gap: 15px;
-}
-
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
@@ -619,7 +747,21 @@ body {
     font-size: 0.9em;
 }
 
-/* Responsive */
+/* ============================================ */
+/* RESPONSIVE */
+/* ============================================ */
+
+@media (max-width: 1400px) {
+    /* Ocultar sidebars laterales en pantallas medianas */
+    .ad-sidebar {
+        display: none;
+    }
+    
+    .content-wrapper {
+        display: block;
+    }
+}
+
 @media (max-width: 992px) {
     .content-grid {
         grid-template-columns: 1fr;
@@ -663,5 +805,15 @@ body {
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    /* Ajustar publicidad en móvil */
+    .ad-inline {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+    
+    .ad-bottom-sticky img {
+        max-width: 320px;
     }
 }
