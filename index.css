@@ -332,12 +332,13 @@ body.modo-claro .theme-btn .icon-sun { display: block; }
 }
 
 .trend__item {
-    border: 1px solid var(--borde);
-    padding: 6px 15px;
+    border: 2px solid var(--borde);
+    padding: 8px 15px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 15px;
     white-space: nowrap;
     cursor: pointer;
+    color: white;
 }
 
 .trend__item:hover { background: var(--borde); }
