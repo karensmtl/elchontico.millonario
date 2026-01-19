@@ -111,3 +111,55 @@ document.addEventListener('DOMContentLoaded', () => {
     simularResultados();
 });
 
+        // JavaScript para el video de noticias
+        const newsVideo = document.getElementById('newsVideo');
+        const playOverlayNews = document.getElementById('playOverlayNews');
+        const audioWarningNews = document.getElementById('audioWarningNews');
+        const muteBtnNews = document.getElementById('muteBtnNews');
+
+        // Función para reproducir el video
+        function playNewsVideo() {
+            newsVideo.play();
+            playOverlayNews.classList.add('hidden');
+            
+            // Si el video está muted, mostrar advertencia de audio
+            if (newsVideo.muted) {
+                audioWarningNews.style.display = 'flex';
+            }
+        }
+
+        // Toggle mute/unmute
+        function toggleMuteNews() {
+            if (newsVideo.muted) {
+                newsVideo.muted = false;
+                muteBtnNews.textContent = '🔊';
+                audioWarningNews.classList.add('hidden');
+            } else {
+                newsVideo.muted = true;
+                muteBtnNews.textContent = '🔇';
+                audioWarningNews.classList.remove('hidden');
+            }
+        }
+
+        // Pantalla completa
+        function toggleFullscreenNews() {
+            if (newsVideo.requestFullscreen) {
+                newsVideo.requestFullscreen();
+            } else if (newsVideo.webkitRequestFullscreen) {
+                newsVideo.webkitRequestFullscreen();
+            } else if (newsVideo.msRequestFullscreen) {
+                newsVideo.msRequestFullscreen();
+            }
+        }
+
+        // Cuando el video termina, mostrar overlay de nuevo
+        newsVideo.addEventListener('ended', function() {
+            playOverlayNews.classList.remove('hidden');
+        });
+
+        // Auto-play preview cuando se hace hover (opcional)
+        newsVideo.parentElement.addEventListener('mouseenter', function() {
+            if (newsVideo.paused) {
+                newsVideo.play().catch(e => console.log('Autoplay prevented'));
+            }
+        });

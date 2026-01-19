@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./index.css" />
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="./index.js" defer></script>
+
 </head>
 <body>
 <header class="header">
     <div class="container header__inner">
-        <h1 class="brand">Elchontico.com</h1>
+        <img src="img/logo.png" alt="Elchontico.com" class="brand-logo">
         <nav class="nav">
             <a href="index.html" class="nav__link active">Inicio</a>
             <a href="envivo.html" class="nav__link">En vivo </a>
@@ -37,9 +38,9 @@
             <section class="content">
                 <div class="card player-card">
                     <div class="card__header">
-                        <span class="live-badge">EN VIVO</span>
+                        <span class="live-badge">🔴 EN VIVO</span>
                         <h2 class="card__title">Señal en vivo</h2>
-                    </div>
+                    </div>}
                     <div class="player">
                         <video id="chontico-player" class="player__video" controls autoplay muted></video>
                     </div>
@@ -50,8 +51,7 @@
                 <div class="card">
                     <div class="card__header"><h2 class="card__title">Resultados Recientes</h2></div>
                     <ul class="results" id="lista-resultados"></ul>
-          
-
+                </div>
             </aside>
         </div>
 
@@ -60,8 +60,46 @@
                 <h2 class="actualidad__title">NOTICIAS</h2>
                 <a href="subpages/boletindestacado.html" class="actualidad__link">Ver todo el contenido ></a>
             </div>
-
+            
             <div class="actualidad__grid">
+                <!-- ========== TARJETA CON VIDEO ========== -->
+                <article class="news-card-v2 video-news-card">
+                    <div class="news-thumb-v2">
+                        <!-- Video -->
+                        <!-- ✏️ CAMBIAR: src con tu video -->
+                        <video id="newsVideo" muted loop playsinline>
+                            <source src="img/19.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+
+                        <!-- Play Button Overlay -->
+                        <div class="play-overlay-news" id="playOverlayNews" onclick="playNewsVideo()">
+                            <div class="play-button-news">▶</div>
+                        </div>
+
+                        <!-- Audio Warning -->
+                        <div class="audio-warning-news" id="audioWarningNews">
+                            🔊 Activar audio
+                        </div>
+
+                        <!-- Video Controls -->
+                        <div class="video-controls-news">
+                            <button class="control-btn-news" id="muteBtnNews" onclick="toggleMuteNews()" title="Activar/Desactivar audio">
+                                🔇
+                            </button>
+                            <button class="control-btn-news" onclick="toggleFullscreenNews()" title="Pantalla completa">
+                                ⛶
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-content-v2">
+                        <h4>Sorteo en Vivo del Chontico</h4>
+                        <p>Transmisión en directo del sorteo de hoy. Haz clic para reproducir con audio.</p>
+                        <a href="#" class="read-more" onclick="playNewsVideo(); return false;">Ver ahora ></a>
+                    </div>
+                </article>
+
+                <!-- ========== TARJETA NORMAL 1 ========== -->
                 <article class="news-card-v2">
                     <div class="news-thumb-v2">
                         <img src="img/hombre.jpg" alt="Noticia Chontico">
@@ -74,6 +112,7 @@
                     </div>
                 </article>
 
+                <!-- ========== TARJETA NORMAL 2 ========== -->
                 <article class="news-card-v2">
                     <div class="news-thumb-v2">
                         <img src="img/actualidad.jpg" alt="Sorteo">
@@ -83,18 +122,6 @@
                         <h4>Noticias de última hora</h4>
                         <p>Las actualidades mundiales</p>
                         <a href="subpages/noticia2.html" class="read-more">Leer más ></a>
-                    </div>
-                </article>
-
-                <article class="news-card-v2">
-                    <div class="news-thumb-v2">
-                        <img src="img/pago.jpg" alt="Info">
-                        <span class="category-tag">Gane</span>
-                    </div>
-                    <div class="news-content-v2">
-                        <h4>Puntos de pago en el Valle</h4>
-                        <p>Conoce la red Gane donde puedes apostar y cobrar tus premios.</p>
-                        <a href="#" class="read-more">Leer más ></a>
                     </div>
                 </article>
             </div>
