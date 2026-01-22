@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!listaResultados) return;
 
         const datosEjemplo = [
-            { fecha: 'Hoy 21 de enero', sorteo: 'Día', numero: '6235 / 4' },
-            { fecha: 'Hoy 21 de enero', sorteo: 'Noche', numero: '9529 / 4' }
+            { fecha: 'Hoy 22 de enero', sorteo: 'Día', numero: '6987 / 4' },
+            { fecha: 'Ayer 21 de enero', sorteo: 'Noche', numero: '9529 / 4' }
         ];
 
         listaResultados.innerHTML = datosEjemplo.map(item => `
